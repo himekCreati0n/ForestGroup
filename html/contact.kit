@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Forest Group - oferty</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
+		<script src="https://kit.fontawesome.com/919728f4c7.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="dist/css/main.min.css" />
+	</head>
+	<body>
+		<!-- @include 'nav-contact.kit' -->
+		<div class="wrapper">
+			<p class="form-title">formularz konktaktowy</p>
+			<div class="form-box">
+				<form action="mail.php" method="post" class="contact-form">
+					<div class="contact-box">
+						<label for="name">Imię:</label>
+						<input type="text" id="name" name="name" required />
+					</div>
+					<div class="contact-box">
+						<label for="email">Email:</label>
+						<input type="email" id="email" name="email" required />
+					</div>
+					<div class="contact-box">
+						<label for="msg">Wiadomość:</label>
+						<textarea name="msg" id="msg" required></textarea>
+					</div>
+
+					<button>Wyślij</button>
+				</form>
+
+				<p class="msg-status"></p>
+			</div>
+		</div>
+		<p class="contact-lower-text">Wypełniając formularz akceptujesz naszą <a class="policy-link" href="policy.html">Politykę prywatności</a></p>
+
+		<div class="contact-info-box">
+			<div class="contact-option">
+				<p class="icon"><i class="fa-solid fa-location-pin"></i></p>
+				<p class="adress">Jasnogórska 2</p>
+				<p class="zip-code">31-358 Kraków</p>
+			</div>
+
+			<div class="contact-option">
+				<p class="icon"><i class="fa-solid fa-phone"></i></p>
+				<p class="number">+48 123 456 789</p>
+			</div>
+
+			<div class="contact-option">
+				<p class="icon"><i class="fa-solid fa-envelope"></i></p>
+				<p class="email">kontakt@kontakt.pl</p>
+			</div>
+		</div>
+
+        <div class="map-location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.483910386005!2d19.89217147682855!3d50.08915251331196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a326d015c3b%3A0x47a12cd367a1f34e!2sRestauracja%20McDonald&#39;s!5e1!3m2!1spl!2spl!4v1737987846401!5m2!1spl!2spl"   allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+		<!-- @include 'footer.kit' -->
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+		<script src="./dist/js/script.min.js"></script>
+		<script src="./dist/js/form.min.js"></script>
+	</body>
+</html>
