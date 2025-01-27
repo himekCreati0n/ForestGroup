@@ -40,8 +40,12 @@ const handleScrollSpy = () => {
 	});
 };
 
+const handleObserver = () =>{
+	
+}
+
  
- window.addEventListener("scroll", handleObserver);
 window.addEventListener('scroll', handleScrollSpy);
-burgerBtn.addEventListener('click', handleNav);
+
+burgerBtn.addEventListener('click', handleNav)
 

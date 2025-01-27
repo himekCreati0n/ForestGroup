@@ -3,6 +3,7 @@
 body {
 	font-family: 'Raleway', sans-serif;
 	color: $main-color;
+	overflow-x: hidden;
 }
 
 .wrapper {
@@ -18,6 +19,7 @@ body {
 	width: 100%;
 	z-index: 2000;
 	background-color: $white;
+	box-shadow: #000000 0px 0px 10px;
 
 	.nav {
 		display: flex;
@@ -135,6 +137,7 @@ body {
 .nav-mobile {
 	position: fixed;
 	top: 0;
+	left: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -331,6 +334,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 	.section-title {
 		position: relative;
 		display: flex;
@@ -371,13 +375,13 @@ body {
 			border-radius: 20px;
 			border: 1px solid black;
 			margin: 2em 0;
-			background-color: $darker-green;
+			background-color: transparent;
 			box-shadow: #000000 0 0 10px;
 			transform: scale(1);
 			transition: transform 0.3s;
 
 			&:hover {
-				transform: scale(1.2);
+				transform: scale(1.05);
 			}
 		}
 
@@ -396,13 +400,14 @@ body {
 
 		.offer-option {
 			position: relative;
-			text-align: start;
-			left: 50%;
-			transform: translateX(-25%);
+			width: 15em;
 			margin: 0.5em 0;
-			font-weight: 600;
-			font-size: 1.2rem;
 
+			font-size: 2rem;
+
+			i{
+				margin-right: .5em;
+			}
 			.fa-check {
 				color: $green;
 			}
@@ -417,12 +422,13 @@ body {
 		}
 
 		.offer-btn {
-			margin: 1.5em 0;
+			margin: 1em 0;
 			padding: 0.5em 2em;
 			border-radius: 8px;
 			box-shadow: #000000 0 0 10px;
 			border: 1px solid transparent;
 			transition: background-color 0.2s;
+			cursor: pointer;
 
 			&:hover,
 			&:focus {
@@ -488,7 +494,11 @@ footer {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		color: $main-color;
+
+		a {
+			color: $main-color;
+			transition: color 0.3s;
+		}
 
 		i {
 			margin-right: 0.25em;
@@ -533,6 +543,7 @@ footer {
 	}
 
 	.footer__bottom-text {
+		padding:.5em 0;
 		text-align: center;
 		font-size: 1rem;
 	}
@@ -540,7 +551,7 @@ footer {
 
 // CONTACT
 
-.form-box{
+.form-box {
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -556,12 +567,12 @@ footer {
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: bold;
-	font-size: 1.4rem;
-	margin-top: 1rem;
+	font-size: 3rem;
+	margin-top: 4rem;
 }
 .contact-form {
 	text-align: center;
-	margin: 0 auto;	
+	margin: 0 auto;
 	position: relative;
 	padding: 30px;
 	width: 200px;
@@ -599,6 +610,7 @@ footer {
 	padding: 12px;
 	width: 100%;
 	cursor: pointer;
+	transition: color .3s, background-color .3s;
 }
 
 .contact-form button:hover {
@@ -638,9 +650,8 @@ footer {
 		color: $main-color;
 		font-weight: bold;
 		cursor: pointer;
-
-		
 	}
+
 }
 
 .contact-info-box {
@@ -649,14 +660,17 @@ footer {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	
 
 	.contact-option {
 		text-align: center;
 		margin: 2em;
 		font-size: 1.4rem;
+		a{
+			color: $main-color;
+		}
 
 		.icon {
+			font-size: 4rem;
 			margin-bottom: 1em;
 		}
 	}
@@ -669,7 +683,6 @@ footer {
 	align-items: center;
 	justify-content: center;
 	margin-bottom: 5em;
-
 }
 
 .main {
@@ -778,14 +791,20 @@ footer {
 
 		.footer__links {
 			flex-direction: row;
-			justify-content: space-around;
+			justify-content: space-between;
 		}
 		.footer__bottom-text {
 			font-size: 1.4rem;
 		}
+
+		.footer__list-item {
+			a {
+				padding: 0.5em;
+			}
+		}
 	}
 
-	.form-box{
+	.form-box {
 		width: 400px;
 
 		.contact-form {
@@ -801,8 +820,6 @@ footer {
 	}
 }
 
-
-
 @media (min-width: 992px) {
 	.nav-desktop {
 		display: block;
@@ -816,6 +833,16 @@ footer {
 		.hero-img {
 			background-image: url('../../src/img/jungle-big.jpg');
 		}
+
+		.home_body {
+			.header-text {
+				font-size: 5rem;
+
+				span {
+					font-size: 7rem;
+				}
+			}
+		}
 	}
 
 	.about-us {
@@ -823,6 +850,10 @@ footer {
 		align-items: center;
 		justify-content: center;
 		flex-direction: row;
+
+		.section-title{
+			font-size: 5rem;
+		}
 
 		.section-title::after {
 			width: 5%;
@@ -846,6 +877,10 @@ footer {
 	}
 
 	.offers {
+
+		.section-title{
+			font-size: 5rem;
+		}
 		.section-title::after {
 			width: 5%;
 			height: 5px;
@@ -854,18 +889,19 @@ footer {
 		.offers-box .offer-cards {
 			width: 300px;
 			height: 400px;
+			
 
 			.offer-title {
-				font-size: 4rem;
+				font-size: 2rem;
 			}
 
 			.offer-amount {
-				font-size: 4rem;
+				font-size: 5rem;
 				margin-top: 0.5rem;
 			}
 
 			.offer-option {
-				font-size: 1.4rem;
+				font-size: 2rem;
 			}
 		}
 
@@ -901,13 +937,13 @@ footer {
 	.contact-lower-text {
 		text-align: center;
 		font-size: 2.4rem;
-	
+
 		.policy-link {
 			position: relative;
 			text-decoration: none;
 			color: $main-color;
 			font-weight: bold;
-	
+
 			&::before {
 				content: '';
 				position: absolute;
@@ -926,7 +962,6 @@ footer {
 			}
 		}
 	}
-	
 
 	.contact-info-box {
 		position: relative;
@@ -935,24 +970,29 @@ footer {
 		justify-content: space-around;
 		flex-direction: row;
 		height: 40em;
-	
+
 		.contact-option {
 			text-align: center;
 			align-items: center;
 			margin: 4em;
 			// text-transform: uppercase;
 			font-size: 2.4rem;
-	
+
 			.icon {
 				margin-bottom: 1em;
 			}
 		}
 	}
-	
+
 	.map-location {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		margin-bottom: 5em;
+
+		iframe{
+			width: 1400px;
+			height: 600px;
+		}
 	}
 }
