@@ -94,6 +94,7 @@ body {
 		position: relative;
 		width: 40px;
 		height: 30px;
+		
 	}
 	&__bars,
 	&__bars-top,
@@ -104,6 +105,7 @@ body {
 		width: 100%;
 		background-color: $white;
 		transition: transform 0.3s;
+		outline: #000000 1px solid;
 	}
 	&__bars,
 	&__bars-top,
