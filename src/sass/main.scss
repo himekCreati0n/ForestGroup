@@ -488,6 +488,7 @@ body {
 	}
 }
 
+
 footer {
 	margin-top: 2em;
 	padding-top: 2em;
@@ -567,6 +568,10 @@ footer {
 	transform: translateX(-50%);
 	width: 400px;
 	height: 600px;
+
+	#msg {
+		resize: none;
+	}
 }
 
 .form-title {
@@ -1001,4 +1006,25 @@ footer {
 			height: 600px;
 		}
 	}
+}
+@media (min-width: 1024px){
+
+	.other-offers  {
+		height: 66vh;
+		
+	}
+}
+
+
+@media (min-width: 1600px) {
+	.form-box, .form-box .contact-form{
+		height: 800px;
+		width: 600px;
+
+		#msg {
+			resize: vertical;
+			max-height: 350px;
+		}
+	}
+
 }
